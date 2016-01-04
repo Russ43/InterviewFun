@@ -45,6 +45,20 @@ namespace InterviewFun.UnitTests
 			Assert.IsFalse(SortTests.IsSorted<char>(new char[] { 'A', 'a', 'B', 'b', 'C', 'c' }));
 		}
 
+		[TestMethod]
+		public void TestBubbleSort()
+		{
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1, 2, 3 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 3, 2, 1 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1, 3, 2 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 2, 3, 1 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { -3, -2, -1 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { -1, -2, -3 })));
+			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 500, 72, -6, 1, 92, 1, 92, 11, 17, -29245, 708, 777, 12 })));
+		}
+
 
 		// private methods
 		static private bool IsSorted<T>(IEnumerable<T> sequence)

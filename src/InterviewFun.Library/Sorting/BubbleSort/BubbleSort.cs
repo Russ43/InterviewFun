@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Collections.Generic;
 
-namespace InterviewFun.Sorting.BubbleSort
+namespace InterviewFun
 {
 	static public class BubbleSort
 	{
