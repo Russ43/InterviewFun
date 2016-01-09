@@ -13,7 +13,7 @@ namespace InterviewFun.LinkedLists
 	/// This is a class singly-linked list data structure with a <see cref="Head"/> property representing the
 	/// first element in the list.
 	/// </remarks>
-	public class LinkedList<T> : IEnumerator<T>, IEnumerator
+	abstract public class LinkedList<T> : IEnumerator<T>, IEnumerator
 	{
 		#region fields
 		private bool _isReset; 
@@ -32,12 +32,12 @@ namespace InterviewFun.LinkedLists
 		#endregion
 
 
-		#region properties
+		#region proetected properties
 		/// <summary>
 		/// The "head" node containing the first element in the list.
 		/// </summary>
 		/// <remarks>If the list is empty, the head is null.</remarks>
-		public Node<T> HeadNode
+		protected Node<T> HeadNode
 		{
 			get;
 			set;
@@ -54,6 +54,15 @@ namespace InterviewFun.LinkedLists
 			get;
 			set;
 		}
+		#endregion
+
+		#region abstract methods
+		/// <summary>
+		/// Reverses a linked list.
+		/// </summary>
+		/// <typeparam name="T">The type of elements stored in the list.</typeparam>
+		/// <param name="linkedList">The list to reverse.</param>
+		abstract public void Reverse();
 		#endregion
 
 		#region methods

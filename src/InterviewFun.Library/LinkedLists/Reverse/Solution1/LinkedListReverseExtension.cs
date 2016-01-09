@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace InterviewFun.LinkedLists
+using InterviewFun.LinkedLists;
+
+namespace InterviewFun.LinkedLists.Reverse
 {
 	/// <summary>
 	/// A static class with an extension method for reversing a <see cref="LinkedList"/>.
 	/// </summary>
-	static public class LinkedListReverseExtension
+	public class Solution1LinkedList<T> : LinkedList<T>
 	{
-		static public void Reverse<T>(this LinkedList<T> linkedList)
+		/// <summary>
+		/// Reverses a linked list.
+		/// </summary>
+		/// <typeparam name="T">The type of elements stored in the list.</typeparam>
+		/// <param name="linkedList">The list to reverse.</param>
+		public override void Reverse()
 		{
 			Node<T> previousNode = null;
-			Node<T> currentNode = linkedList.HeadNode;
+			Node<T> currentNode = HeadNode;
 			while(currentNode != null)
 			{
 				Node<T> nextNode = currentNode.Next;
@@ -23,7 +30,7 @@ namespace InterviewFun.LinkedLists
 				currentNode = nextNode;
 			}
 
-			linkedList.HeadNode = previousNode;
+			HeadNode = previousNode;
 		}
 	}
 }

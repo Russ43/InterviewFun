@@ -39,9 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LinkedLists\LinkedList.cs" />
-    <Compile Include="LinkedLists\Node.cs" />
-    <Compile Include="LinkedLists\Reverse\LinkedListReverseExtension.cs" />
+    <Compile Include="LinkedLists\Given\LinkedList.cs" />
+    <Compile Include="LinkedLists\Given\Node.cs" />
+    <Compile Include="LinkedLists\Reverse\Solution1\LinkedListReverseExtension.cs" />
+    <Compile Include="LinkedLists\Reverse\YourSolution\LinkedListReverseExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\BubbleSort\BubbleSort.cs" />
   </ItemGroup>
