@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace InterviewFun.LinkedList
+namespace InterviewFun.LinkedLists
 {
 	/// <summary>
 	/// A generic singly-linked list.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace InterviewFun.LinkedList
+namespace InterviewFun.LinkedLists
 {
 	/// <summary>
 	/// A generic node for a singly linked list.

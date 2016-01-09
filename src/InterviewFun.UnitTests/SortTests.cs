@@ -6,8 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace InterviewFun.UnitTests
 {
 	[TestClass]
-	public class SortTests 
-		
+	public class SortTests 		
 	{
 		// methods
 		[TestMethod]
