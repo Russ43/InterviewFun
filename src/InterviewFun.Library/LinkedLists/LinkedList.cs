@@ -32,17 +32,19 @@ namespace InterviewFun.LinkedLists
 		#endregion
 
 
-		#region private properties
+		#region properties
 		/// <summary>
 		/// The "head" node containing the first element in the list.
 		/// </summary>
 		/// <remarks>If the list is empty, the head is null.</remarks>
-		private Node<T> HeadNode
+		public Node<T> HeadNode
 		{
 			get;
 			set;
 		}
+		#endregion
 
+		#region private properties
 		/// <summary>
 		/// The "current" node used for iterating over elements in the list and for inserting new elements
 		/// into the list.
@@ -74,6 +76,7 @@ namespace InterviewFun.LinkedLists
 				HeadNode = new Node<T>(value);
 				HeadNode.Next = headNode0;
 
+				CurrentNode = HeadNode;
 				_isReset = false;
 			}
 			else
@@ -81,10 +84,10 @@ namespace InterviewFun.LinkedLists
 				Debug.Assert(HeadNode != null);
 				Debug.Assert(CurrentNode != null);
 
-				Node<T> currentNode0 = CurrentNode;
+				Node<T> newNode = new Node<T>(value);
+				CurrentNode.Next = newNode;
 
-				CurrentNode = new Node<T>(value);
-				CurrentNode.Next = currentNode0;
+				CurrentNode = newNode;
 			}
 		}
 		#endregion
