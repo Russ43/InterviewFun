@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="LinkedLists\Given\LinkedList.cs" />
     <Compile Include="LinkedLists\Given\Node.cs" />
-    <Compile Include="LinkedLists\Reverse\Solution1\LinkedListReverseExtension.cs" />
+    <Compile Include="LinkedLists\Reverse\Solution1\Solution1LinkedList.cs" />
     <Compile Include="LinkedLists\Reverse\YourSolution\YourSolutionLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\BubbleSort\BubbleSort.cs" />
