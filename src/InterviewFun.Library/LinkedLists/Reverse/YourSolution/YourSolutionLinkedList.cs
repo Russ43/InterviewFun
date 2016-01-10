@@ -7,7 +7,7 @@ using InterviewFun.LinkedLists.Reverse;
 namespace InterviewFun.LinkedLists.Reverse
 {
 	/// <summary>
-	/// A static class with an extension method for reversing a <see cref="LinkedList"/>.
+	/// Subclasses <see cref="LinkedList"/> so you can provide an implementation of <see cref="YourSolutionLinkedLists.Reverse" />.
 	/// </summary>
 	public class YourSolutionLinkedList1<T> : LinkedList<T>
 	{

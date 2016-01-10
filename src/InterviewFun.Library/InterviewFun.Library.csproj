@@ -42,11 +42,13 @@
     <Compile Include="LinkedLists\Given\LinkedList.cs" />
     <Compile Include="LinkedLists\Given\Node.cs" />
     <Compile Include="LinkedLists\Reverse\Solution1\LinkedListReverseExtension.cs" />
-    <Compile Include="LinkedLists\Reverse\YourSolution\LinkedListReverseExtension.cs" />
+    <Compile Include="LinkedLists\Reverse\YourSolution\YourSolutionLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\BubbleSort\BubbleSort.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="LinkedLists\Reverse\README.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
