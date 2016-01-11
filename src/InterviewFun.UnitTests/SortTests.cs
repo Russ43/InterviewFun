@@ -3,12 +3,15 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using InterviewFun.Sorting;
+
 namespace InterviewFun.UnitTests
 {
 	[TestClass]
 	public class SortTests 		
 	{
 		// methods
+		#region test methods
 		[TestMethod]
 		public void TestIsSortedMethod()
 		{
@@ -45,21 +48,21 @@ namespace InterviewFun.UnitTests
 		}
 
 		[TestMethod]
-		public void TestBubbleSort()
+		public void TestSolution1BubbleSorter()
 		{
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1, 2, 3 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 3, 2, 1 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 1, 3, 2 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 2, 3, 1 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { -3, -2, -1 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { -1, -2, -3 })));
-			Assert.IsTrue(IsSorted<int>(BubbleSort.Sort<int>(new int[] { 500, 72, -6, 1, 92, 1, 92, 11, 17, -29245, 708, 777, 12 })));
+			Sorter<int> sorter = new Solution1BubbleSorter<int>();
+			TestInt32Sorter(sorter);
 		}
 
+		[TestMethod]
+		public void TestYourSolutionBubbleSorter()
+		{
+			Sorter<int> sorter = new YourSolutionBubbleSorter<int>();
+			TestInt32Sorter(sorter);
+		}
+		#endregion
 
-		// private methods
+		#region private methods
 		static private bool IsSorted<T>(IEnumerable<T> sequence)
 			where T : IComparable<T>
 		{
@@ -87,6 +90,20 @@ namespace InterviewFun.UnitTests
 
 			return isSorted;
 		}
+
+		static private void TestInt32Sorter(Sorter<int> sorter)
+		{
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 1 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 1, 2, 3 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 3, 2, 1 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 1, 3, 2 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 2, 3, 1 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { -3, -2, -1 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { -1, -2, -3 })));
+			Assert.IsTrue(IsSorted(sorter.Sort(new int[] { 500, 72, -6, 1, 92, 1, 92, 11, 17, -29245, 708, 777, 12 })));
+		}
+		#endregion
 	}
 }
 
