@@ -45,10 +45,15 @@
     <Compile Include="LinkedLists\Reverse\YourSolution\YourSolutionLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\BubbleSort\BubbleSort.cs" />
+    <Compile Include="StringManipulation\atoi\Solution1\Solution1Atoi.cs" />
+    <Compile Include="StringManipulation\atoi\YourSolution\YourSolutionAtoi.cs" />
+    <Compile Include="StringManipulation\Given\IAtoi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LinkedLists\Reverse\README.md" />
+    <None Include="StringManipulation\atoi\README.md" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
