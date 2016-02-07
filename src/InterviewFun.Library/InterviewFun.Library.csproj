@@ -47,10 +47,13 @@
     <Compile Include="Sorting\BubbleSort\YourSolution\YourSolutionBubbleSorter.cs" />
     <Compile Include="Sorting\Given\Sorter.cs" />
     <Compile Include="Sorting\BubbleSort\Solution1\Solution1BubbleSorter.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="LinkedLists\Reverse\README.md" />
     <None Include="Sorting\BubbleSort\README.md" />
+    <Compile Include="Sorting\BubbleSort\BubbleSort.cs" />
+    <None Include="StringManipulation\atoi\README.md" />
+    <Compile Include="StringManipulation\atoi\Solution1\Solution1Atoi.cs" />
+    <Compile Include="StringManipulation\atoi\YourSolution\YourSolutionAtoi.cs" />
+    <Compile Include="StringManipulation\Given\IAtoi.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
